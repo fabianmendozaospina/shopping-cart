@@ -33,7 +33,7 @@ function updateCartUI() {
         (item, index) => `
         <li>
           ${item.name} - $${item.price}
-          <button class="remove-item" data-index="${index}">❌</button>
+          <button class="remove-item" data-index="${index}"><i class="fa-regular fa-circle-xmark"></i></button>
         </li>
       `
       )

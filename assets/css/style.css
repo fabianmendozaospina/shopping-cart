@@ -115,6 +115,11 @@ body {
 .title-popup {
     margin-bottom: 10px;
 }
+
+.remove-item {
+    color: red;
+    background-color: var(--app-white);
+}
   
 .hidden {
     display: none;

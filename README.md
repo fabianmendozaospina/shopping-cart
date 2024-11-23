@@ -3,23 +3,23 @@
 ![Badge](https://img.shields.io/badge/Learn-HOW!-orange)<br>
 # Building a Shopping Cart with LocalStorage in JavaScript
 
-LocalStorage is a web storage feature provided by modern browsers that allows websites to store data in the user's browser. This data is saved persistently, meaning it remains even after the browser is closed or the user navigates away from the page. Unlike cookies, LocalStorage can store larger amounts of data and is not sent to the server with every HTTP request.
+`LocalStorage` is a web storage feature provided by modern browsers that allows websites to store data in the user's browser. This data is saved persistently, meaning it remains even after the browser is closed or the user navigates away from the page. Unlike cookies, `LocalStorage` can store larger amounts of data and is not sent to the server with every HTTP request.
 
-One of the main advantages of LocalStorage is that it enables client-side storage of data, making it a great choice for saving user preferences, session information, or, as in our example, shopping cart data for an e-commerce website.
+One of the main advantages of `LocalStorage` is that it enables client-side storage of data, making it a great choice for saving user preferences, session information, or, as in our example, shopping cart data for an e-commerce website.
 
 ## Example: Shopping Cart Using LocalStorage
 
-In this example, we will demonstrate a simple, modern e-commerce shopping cart that utilizes LocalStorage to store and manage the cart data. The core functionality includes:
+In this [example](https://fabianmendozaospina.github.io/shopping-cart/), we will demonstrate a simple, modern e-commerce shopping cart that utilizes `LocalStorage` to store and manage the cart data. The core functionality includes:
 
 - Adding products to the cart: Users can add items to the shopping cart by clicking the "Add to Cart" button for each product.
 
-- Storing cart data in LocalStorage: The cart data is saved in LocalStorage, meaning the cart's contents will persist even if the user refreshes the page or closes the browser.
+- Storing cart data in `LocalStorage`: The cart data is saved in `LocalStorage`, meaning the cart's contents will persist even if the user refreshes the page or closes the browser.
 
-- Removing products from the cart: Users can remove items from the cart, and the cart data will be updated both visually and in LocalStorage.
+- Removing products from the cart: Users can remove items from the cart, and the cart data will be updated both visually and in `LocalStorage`.
 
 - Viewing the cart in a popup: By clicking the cart button in the header, users can view the contents of their cart in a modal popup, with the total price of the items displayed.
 
-- This project is a simple, yet practical implementation of LocalStorage for a shopping cart in a web application, demonstrating how you can persist user data on the client side.
+- This project is a simple, yet practical implementation of `LocalStorage` for a shopping cart in a web application, demonstrating how you can persist user data on the client side.
 
 ## Features
 
@@ -27,7 +27,7 @@ In this example, we will demonstrate a simple, modern e-commerce shopping cart t
 
 - Shopping Cart: Users can add products to the cart, view the cart contents, and see the total price of their selected items.
 
-- Persistence with LocalStorage: All cart data is saved in the browser's LocalStorage, so it persists even after page refreshes or closing the browser.
+- Persistence with `LocalStorage`: All cart data is saved in the browser's `LocalStorage`, so it persists even after page refreshes or closing the browser.
 
 - Remove Items: Users can easily remove items from the cart, and the UI will update accordingly.
 
@@ -39,9 +39,9 @@ In this example, we will demonstrate a simple, modern e-commerce shopping cart t
 
 - CSS3: To style the page, including the product grid, buttons, and modal popup.
 
-- JavaScript (ES6+): To handle functionality, including adding/removing products from the cart and interacting with LocalStorage.
+- JavaScript (ES6+): To handle functionality, including adding/removing products from the cart and interacting with `LocalStorage`.
 
-- LocalStorage: For persisting the shopping cart data between page reloads and across browser sessions.
+- `LocalStorage`: For persisting the shopping cart data between page reloads and across browser sessions.
 
 ## Setup Instructions
 
@@ -61,7 +61,7 @@ To get started with this project locally, follow these steps:
 
 3. Open the index.html file in your browser:
 
-    Simply double-click on the index.html file or open it via a local web server to view the application. Another alternative is running the sample application from the GitHub [repository](https://fabianmendozaospina.github.io/prairie-point-hotel/).
+    Simply double-click on the index.html file or open it via a local web server to view the application. Another alternative is running the sample application from the GitHub [repository](https://fabianmendozaospina.github.io/shopping-cart/).
 
 ## Code Explanation
 
@@ -199,7 +199,7 @@ The `index.js` file contains the JavaScript code responsible for managing the fu
 
     - When a user clicks the "Add to Cart" button, this event listener is triggered.
     - It retrieves the product information (ID, name, price) from the data-* attributes of the product element and adds it to the `cart` array.
-    - After adding the item to the cart, saveCart() saves the updated cart to LocalStorage, and `updateCartUI()` is called to refresh the UI.
+    - After adding the item to the cart, saveCart() saves the updated cart to `LocalStorage`, and `updateCartUI()` is called to refresh the UI.
 
 6. Removing Products from the Cart
 
@@ -267,9 +267,10 @@ The getItem() and setItem() methods are key components of the Web Storage API (l
     ```
 
     - key: The name of the key whose value you want to retrieve.
+    - When you retrieve a stringified object or array from localStorage using getItem(), you'll need to convert it back into its original structure using JSON.parse().
 
 ## Conclusion
 
-This project demonstrates how to use LocalStorage to persist shopping cart data in a simple, modern e-commerce web application. It shows how web storage can be utilized to enhance the user experience by maintaining state across sessions, even when the page is refreshed or the browser is closed.
+This project demonstrates how to use `LocalStorage` to persist shopping cart data in a simple, modern e-commerce web application. It shows how web storage can be utilized to enhance the user experience by maintaining state across sessions, even when the page is refreshed or the browser is closed.
 
 You can extend this project by adding features such as user authentication, a checkout process, or integrating with a backend system for payment processing. The principles demonstrated here, however, lay the foundation for building more complex, client-side storage-based applications.

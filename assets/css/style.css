@@ -95,12 +95,7 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-/* 
-.close-popup {
-    margin-top: 20px;
-    margin-bottom: 20px;
-} */
-  
+
 .cart-popup {
     position: fixed;
     top: 50%;
@@ -114,6 +109,28 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 90%;
+    max-width: 400px;
+    height: 60vh;
+}
+
+.cart-items-container {
+    flex-grow: 1;
+    width: 100%;
+    overflow-y: auto;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 1rem 0;
+}
+
+.cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.close-popup, .cart-total {
+    margin-top: 1rem;
 }
 
 .title-popup {

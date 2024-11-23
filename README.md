@@ -1,6 +1,7 @@
-![image](./assets/img/local-storage.jpg)
 
-# How to Use the LocalStorage with JavaScript
+![image](./assets/img/local-storage.png)<br>
+![Badge](https://img.shields.io/badge/Learn-HOW!-orange)<br>
+# Building a Shopping Cart with LocalStorage in JavaScript
 
 LocalStorage is a web storage feature provided by modern browsers that allows websites to store data in the user's browser. This data is saved persistently, meaning it remains even after the browser is closed or the user navigates away from the page. Unlike cookies, LocalStorage can store larger amounts of data and is not sent to the server with every HTTP request.
 
@@ -10,11 +11,15 @@ One of the main advantages of LocalStorage is that it enables client-side storag
 
 In this example, we will demonstrate a simple, modern e-commerce shopping cart that utilizes LocalStorage to store and manage the cart data. The core functionality includes:
 
-Adding products to the cart: Users can add items to the shopping cart by clicking the "Add to Cart" button for each product.
-Storing cart data in LocalStorage: The cart data is saved in LocalStorage, meaning the cart's contents will persist even if the user refreshes the page or closes the browser.
-Removing products from the cart: Users can remove items from the cart, and the cart data will be updated both visually and in LocalStorage.
-Viewing the cart in a popup: By clicking the cart button in the header, users can view the contents of their cart in a modal popup, with the total price of the items displayed.
-This project is a simple, yet practical implementation of LocalStorage for a shopping cart in a web application, demonstrating how you can persist user data on the client side.
+- Adding products to the cart: Users can add items to the shopping cart by clicking the "Add to Cart" button for each product.
+
+- Storing cart data in LocalStorage: The cart data is saved in LocalStorage, meaning the cart's contents will persist even if the user refreshes the page or closes the browser.
+
+- Removing products from the cart: Users can remove items from the cart, and the cart data will be updated both visually and in LocalStorage.
+
+- Viewing the cart in a popup: By clicking the cart button in the header, users can view the contents of their cart in a modal popup, with the total price of the items displayed.
+
+- This project is a simple, yet practical implementation of LocalStorage for a shopping cart in a web application, demonstrating how you can persist user data on the client side.
 
 ## Features
 
@@ -56,10 +61,9 @@ To get started with this project locally, follow these steps:
 
 3. Open the index.html file in your browser:
 
-    Simply double-click on the index.html file or open it via a local web server to view the application.
+    Simply double-click on the index.html file or open it via a local web server to view the application. Another alternative is running the sample application from the GitHub [repository](https://fabianmendozaospina.github.io/prairie-point-hotel/).
 
 ## Code Explanation
-
 
 ### HTML Structure
 
@@ -216,6 +220,53 @@ The `index.js` file contains the JavaScript code responsible for managing the fu
     - Each product in the `cart` has a "remove" button (❌). Clicking this button removes the item from the cart.
     - `cart.splice(index, 1)` removes the item from the `cart` array, and the updated cart is saved and displayed.
 
+7. Displaying and Closing the Cart Popup
+
+    ```
+    listen('click', cartButtonObj, () => {
+        cartPopupObj.classList.remove('hidden');
+    });
+
+    listen('click', closePopupObj, () => {
+        cartPopupObj.classList.add('hidden');
+    });
+
+    ```
+
+    - Clicking the "Cart" button opens the cart popup, and clicking the "Close" button hides it.
+    - The hidden class is toggled to show or hide the cart popup.
+
+### The key code we use
+
+The getItem() and setItem() methods are key components of the Web Storage API (like localStorage and sessionStorage) used for storing and retrieving data in the browser.
+
+1. setItem()
+    The setItem() method is used to store a key-value pair in the storage.
+
+    Syntax:
+
+    ```
+    localStorage.setItem(key, value);
+    ```
+    
+    - key: A string representing the name of the item.
+    - value: A string representing the value to store. (You need to stringify objects or arrays using JSON.stringify() if necessary.)
+    - We use JSON.stringify() because localStorage (and sessionStorage) can only store strings. If you want to store more complex data structures like objects or arrays, you need to convert them into a string format.
+    - You can view the status of `LocalStorage` by pressing F12 in the browser and going to the Application tab. You will see something like this:
+
+        ![image](./assets/img/local-storage-browser.png)
+
+2. getItem()
+
+    The getItem() method retrieves the value associated with a given key.
+
+    Syntax:
+
+    ```
+    localStorage.getItem(key);
+    ```
+
+    - key: The name of the key whose value you want to retrieve.
 
 ## Conclusion
 

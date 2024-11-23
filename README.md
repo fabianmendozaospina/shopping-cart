@@ -217,7 +217,7 @@ The `index.js` file contains the JavaScript code responsible for managing the fu
     }
     ```
 
-    - Each product in the `cart` has a "remove" button (❌). Clicking this button removes the item from the cart.
+    - Each product in the `cart` has a "remove" button ![image](./assets/img/close.png). Clicking this button removes the item from the cart.
     - `cart.splice(index, 1)` removes the item from the `cart` array, and the updated cart is saved and displayed.
 
 7. Displaying and Closing the Cart Popup

@@ -274,3 +274,7 @@ The getItem() and setItem() methods are key components of the Web Storage API (l
 This project demonstrates how to use `LocalStorage` to persist shopping cart data in a simple, modern e-commerce web application. It shows how web storage can be utilized to enhance the user experience by maintaining state across sessions, even when the page is refreshed or the browser is closed.
 
 You can extend this project by adding features such as user authentication, a checkout process, or integrating with a backend system for payment processing. The principles demonstrated here, however, lay the foundation for building more complex, client-side storage-based applications.
+
+Finally, if you use the styles downloaded from the [repository](https://github.com/fabianmendozaospina/shopping-cart), your app could have this appearance:
+
+![image](./assets/img/app.png)

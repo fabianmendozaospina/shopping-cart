@@ -1,0 +1,131 @@
+@charset "utf=8";
+ 
+/* ------------------------------ */
+/*         General Rules          */
+/* ------------------------------ */
+ 
+:root {
+    --app-dark-background: #f8f9fa;
+    --app-white: #fff;
+    --app-blue: #007bff;
+    --app-green: #28a745;
+}
+
+.container {
+    width: min(100% - 30px, 1080px);
+    margin-inline: auto;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--app-dark-background);
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+  
+/* ------------------------------ */
+/*             Header             */
+/* ------------------------------ */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #343a40;
+    color: var(--app-white);
+    padding: 1rem 2rem;
+    height: auto;
+}
+  
+.cart-button {
+    background-color: var(--app-blue);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+/* ------------------------------ */
+/*            Catalog             */
+/* ------------------------------ */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100%;
+}
+  
+.product {
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+  
+.product img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    margin: 0 auto 1rem;
+}
+
+.add-to-cart, .close-popup {
+    background-color: var(--app-green);
+    color: var(--app-white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+}
+
+.close-popup {
+    margin-top: 20px;
+}
+  
+.cart-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-popup {
+    margin-bottom: 10px;
+}
+  
+.hidden {
+    display: none;
+}
+
+.price {
+    margin-bottom: 8px;
+}
+
+.total {
+    margin-top: 8px;
+    font-size: 20px;
+    font-weight: 600;
+}

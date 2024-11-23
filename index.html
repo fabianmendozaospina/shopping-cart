@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Fabian Mendoza & Douglas Santiago">
+  <meta name="description" content="Shoping Cart">
+  <meta name="keywords" content="html, css, javascript, web development">
+  <title>Shoping Cart</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mrspecht/cdn/reset.css" media="all">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/index.js" defer></script>
+</head>
+<body>
+    <header class="header">
+      <h1>Dev T-Shirts</h1>
+      <button class="cart-button">🛒 Cart (<span class="cart-count">0</span>)</button>
+    </header>
+  
+    <main class="container product-grid">
+        <div class="product" data-id="1" data-name="T-Shirt HTML" data-price="15">
+            <img src="./assets/img/html.png" alt="T-Shirt HTML">
+            <h2>HTML T-Shirt</h2>
+            <p class="price">$15</p>
+            <button class="add-to-cart">Add to cart</button>
+        </div>        
+
+        <div class="product" data-id="2" data-name="T-Shirt CSS" data-price="25">
+            <img src="./assets/img/css.png" alt="T-Shirt CSS">
+            <h2>CSS T-Shirt</h2>
+            <p class="price">$25</p>
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+
+        <div class="product" data-id="3" data-name="T-Shirt JavaScript" data-price="20">
+            <img src="./assets/img/javascript.png" alt="T-Shirt JavaScript">
+            <h2>JavaScript T-Shirt</h2>
+            <p class="price">$20</p>
+            <button class="add-to-cart">Add to cart</button>
+        </div>        
+    </main>
+    <div class="cart-popup hidden">
+        <h2 class="title-popup">Your Shopping Cart</h2>
+        <ul class="cart-items"></ul>
+        <p class="total">Total: $<span class="cart-total">0</span></p>
+        <button class="close-popup">Cerrar</button>
+    </div>
+  </body>
+</html>
